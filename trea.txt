@@ -1,0 +1,79 @@
+import java.util.Scanner;
+
+public class Ejercitacion {
+public static void main(String[] args) {
+
+// 1)
+for (int i = 0; i <= 10; i++) {
+int multiplicacion = i * 4;
+System.out.println(i + " * 4 = " + multiplicacion);
+}
+
+System.out.println();
+
+// 2)
+Scanner scanner = new Scanner(System.in);
+int suma = 0;
+
+while (suma <= 10) {
+System.out.print("Ingrese un nuevo número: ");
+int nuevo = scanner.nextInt();
+suma = suma + nuevo;
+}
+
+System.out.println("La suma es: " + suma);
+
+System.out.println();
+
+// 3)
+for (int i = 1; i <= 12; i += 2) {
+System.out.println(i + "\t" + (i + 1));
+}
+
+System.out.println();
+
+// 4)
+for (int i = 1; i <= 6; i++) {
+System.out.println(i + "\t" + (i + 6));
+}
+
+System.out.println();
+
+// 5)
+int suma2 = 0;
+int contador = 0;
+int num;
+
+do {
+System.out.print("Ingrese un número (0 para terminar): ");
+num = scanner.nextInt();
+if (num != 0) {
+suma2 += num;
+contador++;
+}
+} while (num != 0);
+
+if (contador > 0) {
+double promedio = (double) suma2 / contador;
+System.out.println("Promedio: " + promedio);
+}
+
+System.out.println();
+
+// 6)
+int suma3 = 0;
+int contador2 = 0;
+
+while (suma3 < 20) {
+System.out.print("Ingrese un número: ");
+int n = scanner.nextInt();
+suma3 += n;
+contador2++;
+}
+
+double promedio2 = (double) suma3 / contador2;
+System.out.println("Promedio: " + promedio2);
+
+scanner.close();
+}
+}
