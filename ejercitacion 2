@@ -1,0 +1,299 @@
+import java.util.Scanner;
+
+public class ejercicio1 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int[] a = new int[5];
+int suma = 0;
+for(int i=0;i<5;i++){
+a[i]=sc.nextInt();
+suma+=a[i];
+}
+System.out.println(suma);
+}
+}
+
+
+
+
+import java.util.Scanner;
+
+public class ejercicio2 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int[] a = new int[5];
+int max;
+for(int i=0;i<5;i++){
+a[i]=sc.nextInt();
+}
+max=a[0];
+for(int i=1;i<5;i++){
+if(a[i]>max){
+max=a[i];
+}
+}
+System.out.println(max);
+}
+}
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class ejercicio3 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int[] a = new int[5];
+int min;
+for(int i=0;i<5;i++){
+a[i]=sc.nextInt();
+}
+min=a[0];
+for(int i=1;i<5;i++){
+if(a[i]<min){
+min=a[i];
+}
+}
+System.out.println(min);
+}
+}
+
+
+
+
+
+import java.util.Scanner;
+
+public class ejercicio4 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int[] a = new int[5];
+int suma = 0;
+for(int i=0;i<5;i++){
+a[i]=sc.nextInt();
+suma+=a[i];
+}
+System.out.println(suma/5);
+}
+}
+
+
+
+
+
+import java.util.Scanner;
+
+public class ejercicio5 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int[] a = new int[5];
+int pares = 0;
+for(int i=0;i<5;i++){
+a[i]=sc.nextInt();
+if(a[i]%2==0){
+pares++;
+}
+}
+System.out.println(pares);
+}
+}
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class ejercicio6 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int num = (int)(Math.random()*100)+1;
+int x = 0;
+while(x!=num){
+x = sc.nextInt();
+if(x<num){
+System.out.println("mayor");
+}else if(x>num){
+System.out.println("menor");
+}
+}
+System.out.println("ganaste");
+}
+}
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class ejercicio7 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int user = sc.nextInt();
+int pc = (int)(Math.random()*3);
+if(user==pc){
+System.out.println("empate");
+}else if((user==0 && pc==2)||(user==1 && pc==0)||(user==2 && pc==1)){
+System.out.println("ganaste");
+}else{
+System.out.println("perdiste");
+}
+}
+}
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class ejercicio8 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String palabra = "casa";
+char[] oculto = {'_','_','_','_'};
+for(int i=0;i<4;i++){
+char letra = sc.next().charAt(0);
+if(letra==palabra.charAt(i)){
+oculto[i]=letra;
+}else{
+System.out.println("error");
+}
+System.out.println(oculto);
+}
+System.out.println("ganaste");
+}
+}
+
+
+
+
+import java.util.Scanner;
+
+public class ejercicio9 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int[] a = new int[3];
+for(int i=0;i<3;i++){
+a[i]=(int)(Math.random()*10);
+System.out.print(a[i]+" ");
+}
+System.out.println();
+int ok = 1;
+for(int i=0;i<3;i++){
+int x = sc.nextInt();
+if(x!=a[i]){
+ok=0;
+}
+}
+if(ok==1){
+System.out.println("ganaste");
+}else{
+System.out.println("perdiste");
+}
+}
+}
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class ejercicio10 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String palabra = "java";
+char[] oculto = {'j','_','_','_'};
+while(true){
+char letra = sc.next().charAt(0);
+for(int i=0;i<4;i++){
+if(letra==palabra.charAt(i)){
+oculto[i]=letra;
+}
+}
+System.out.println(oculto);
+if(String.valueOf(oculto).equals(palabra)){
+break;
+}
+}
+System.out.println("ganaste");
+}
+}
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class ejercicio11 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int[] a = new int[5];
+for(int i=0;i<5;i++){
+a[i]=sc.nextInt();
+}
+for(int i=4;i>=0;i--){
+System.out.println(a[i]);
+}
+}
+}
+
+
+
+
+
+
+
+public class ejercicio12 {
+public static void main(String[] args) {
+int[] a = {15,2,8,99,4,7,1,20};
+int max = a[0];
+int min = a[0];
+for(int i=1;i<8;i++){
+if(a[i]>max){
+max=a[i];
+}
+if(a[i]<min){
+min=a[i];
+}
+}
+System.out.println(max);
+System.out.println(min);
+}
+}
+
+
+
+
+
+
+public class ejercicio13 {
+public static void main(String[] args) {
+String[] nombres = {"juan","ana","luis","maria"};
+double[] notas = {7,4,6,3};
+for(int i=0;i<4;i++){
+if(notas[i]>=6){
+System.out.println(nombres[i]+" aprobado");
+}else{
+System.out.println(nombres[i]+" reprobado");
+}
+}
+}
+}
