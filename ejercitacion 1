@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class ejercitacion {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int numero;
+        int sumaPos = 0;
+        int cantNeg = 0;
+
+        numero = sc.nextInt();
+        while (numero != 0) {
+            if (numero > 0) {
+                sumaPos = sumaPos + numero;
+            } else {
+                cantNeg++;
+            }
+            numero = sc.nextInt();
+        }
+        System.out.println(sumaPos);
+        System.out.println(cantNeg);
+
+        int clave = 1234;
+        int intento;
+        int i = 0;
+        boolean ok = false;
+
+        while (i < 3 && ok == false) {
+            intento = sc.nextInt();
+            if (intento == clave) {
+                System.out.println("bienvenido al sistema");
+                ok = true;
+            } else {
+                System.out.println("acceso denegado");
+            }
+            i++;
+        }
+        if (ok == false) {
+            System.out.println("sistema bloqueado");
+        }
+
+        int alumnos;
+        int nota;
+        int suma = 0;
+        double promedio;
+
+        alumnos = sc.nextInt();
+
+        for (i = 0; i < alumnos; i++) {
+            nota = sc.nextInt();
+
+            if (nota >= 1 && nota <= 3) {
+                System.out.println("insuficiente");
+            } else if (nota <= 5) {
+                System.out.println("regular");
+            } else if (nota <= 7) {
+                System.out.println("bueno");
+            } else if (nota <= 9) {
+                System.out.println("muy bueno");
+            } else if (nota == 10) {
+                System.out.println("excelente");
+            }
+
+            suma = suma + nota;
+        }
+
+        promedio = (double) suma / alumnos;
+        System.out.println(promedio);
+
+        sc.close();
+    }
+}
