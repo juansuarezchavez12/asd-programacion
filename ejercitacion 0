@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class ejercitacion {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int i;
+        int numero;
+        int suma;
+        int contador;
+        double promedio;
+
+        for (i = 0; i <= 10; i++) {
+            System.out.println("4 x " + i + " = " + (4 * i));
+        }
+
+        suma = 0;
+        while (suma <= 10) {
+            numero = sc.nextInt();
+            suma = suma + numero;
+        }
+        System.out.println(suma);
+
+        for (i = 1; i <= 6; i++) {
+            System.out.println((i * 2 - 1) + "\t" + (i * 2));
+        }
+
+        for (i = 1; i <= 6; i++) {
+            System.out.println(i + "\t" + (i + 6));
+        }
+
+        suma = 0;
+        contador = 0;
+        numero = -1;
+        while (numero != 0) {
+            numero = sc.nextInt();
+            if (numero != 0) {
+                suma = suma + numero;
+                contador++;
+            }
+        }
+        promedio = (double) suma / contador;
+        System.out.println(promedio);
+
+        suma = 0;
+        contador = 0;
+        while (suma < 20) {
+            numero = sc.nextInt();
+            suma = suma + numero;
+            contador++;
+        }
+        promedio = (double) suma / contador;
+        System.out.println(promedio);
+
+        sc.close();
+    }
+}
